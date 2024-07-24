@@ -72,60 +72,90 @@ public class LaberintoVista extends JFrame {
 
     private void inicializarPanelBotones() {
         panelBotones = new JPanel();
-        panelBotones.setLayout(new GridLayout(4, 1));
+        panelBotones.setLayout(new GridBagLayout());
+        GridBagConstraints gbc = new GridBagConstraints();
 
+        gbc.insets = new Insets(5, 5, 5, 5);
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        
+        // Panel de resolución de laberinto
         JPanel panelResolucion = new JPanel();
+        panelResolucion.setLayout(new GridLayout(1, 5, 5, 5));
+
         JButton botonBFS = new JButton("Resolver con BFS");
         JButton botonDFS = new JButton("Resolver con DFS");
         JButton botonRecursivo = new JButton("Resolver con Recursivo");
         JButton botonCache = new JButton("Resolver con Cache");
         JButton botonLimpiar = new JButton("Limpiar Laberinto");
-        
-   
 
-        
         botonBFS.addActionListener(e -> resolverLaberinto("BFS"));
         botonDFS.addActionListener(e -> resolverLaberinto("DFS"));
         botonRecursivo.addActionListener(e -> resolverLaberinto("Recursivo"));
         botonCache.addActionListener(e -> resolverLaberinto("Cache"));
         botonLimpiar.addActionListener(e -> limpiarLaberinto());
-        
+
         panelResolucion.add(botonBFS);
         panelResolucion.add(botonDFS);
         panelResolucion.add(botonRecursivo);
         panelResolucion.add(botonCache);
         panelResolucion.add(botonLimpiar);
 
-        
-        JPanel panelConfiguracion = new JPanel();
-        panelConfiguracion.setLayout(new GridLayout(6, 2));
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        gbc.gridwidth = 2;
+        panelBotones.add(panelResolucion, gbc);
 
-        panelConfiguracion.add(new JLabel("Filas:"));
-        JTextField campoFilas = new JTextField(String.valueOf(filas));
-        panelConfiguracion.add(campoFilas);
+        // Panel de configuración del laberinto
+        JPanel panelConfiguracion = new JPanel(new GridBagLayout());
+        GridBagConstraints gbcConfig = new GridBagConstraints();
+        gbcConfig.insets = new Insets(5, 5, 5, 5);
+        gbcConfig.fill = GridBagConstraints.HORIZONTAL;
 
-        panelConfiguracion.add(new JLabel("Columnas:"));
-        JTextField campoColumnas = new JTextField(String.valueOf(columnas));
-        panelConfiguracion.add(campoColumnas);
+        JLabel lblFilas = new JLabel("Filas:");
+        JTextField campoFilas = new JTextField(String.valueOf(filas), 5);
+        JLabel lblColumnas = new JLabel("Columnas:");
+        JTextField campoColumnas = new JTextField(String.valueOf(columnas), 5);
+        JLabel lblInicioX = new JLabel("Inicio X:");
+        campoInicioX = new JTextField("0", 5);
+        JLabel lblInicioY = new JLabel("Inicio Y:");
+        campoInicioY = new JTextField("0", 5);
+        JLabel lblFinX = new JLabel("Fin X:");
+        campoFinX = new JTextField(String.valueOf(filas - 1), 5);
+        JLabel lblFinY = new JLabel("Fin Y:");
+        campoFinY = new JTextField(String.valueOf(columnas - 1), 5);
 
-        panelConfiguracion.add(new JLabel("Inicio X:"));
-        campoInicioX = new JTextField("0");
-        panelConfiguracion.add(campoInicioX);
-
-        panelConfiguracion.add(new JLabel("Inicio Y:"));
-        campoInicioY = new JTextField("0");
-        panelConfiguracion.add(campoInicioY);
-
-        panelConfiguracion.add(new JLabel("Fin X:"));
-        campoFinX = new JTextField(String.valueOf(filas - 1));
-        panelConfiguracion.add(campoFinX);
-
-        panelConfiguracion.add(new JLabel("Fin Y:"));
-        campoFinY = new JTextField(String.valueOf(columnas - 1));
-        panelConfiguracion.add(campoFinY);
+        gbcConfig.gridx = 0;
+        gbcConfig.gridy = 0;
+        panelConfiguracion.add(lblFilas, gbcConfig);
+        gbcConfig.gridx = 1;
+        panelConfiguracion.add(campoFilas, gbcConfig);
+        gbcConfig.gridx = 0;
+        gbcConfig.gridy = 1;
+        panelConfiguracion.add(lblColumnas, gbcConfig);
+        gbcConfig.gridx = 1;
+        panelConfiguracion.add(campoColumnas, gbcConfig);
+        gbcConfig.gridx = 0;
+        gbcConfig.gridy = 2;
+        panelConfiguracion.add(lblInicioX, gbcConfig);
+        gbcConfig.gridx = 1;
+        panelConfiguracion.add(campoInicioX, gbcConfig);
+        gbcConfig.gridx = 0;
+        gbcConfig.gridy = 3;
+        panelConfiguracion.add(lblInicioY, gbcConfig);
+        gbcConfig.gridx = 1;
+        panelConfiguracion.add(campoInicioY, gbcConfig);
+        gbcConfig.gridx = 0;
+        gbcConfig.gridy = 4;
+        panelConfiguracion.add(lblFinX, gbcConfig);
+        gbcConfig.gridx = 1;
+        panelConfiguracion.add(campoFinX, gbcConfig);
+        gbcConfig.gridx = 0;
+        gbcConfig.gridy = 5;
+        panelConfiguracion.add(lblFinY, gbcConfig);
+        gbcConfig.gridx = 1;
+        panelConfiguracion.add(campoFinY, gbcConfig);
 
         JButton botonActualizar = new JButton("Actualizar tamaño");
-
         botonActualizar.addActionListener(e -> {
             try {
                 int nuevasFilas = Integer.parseInt(campoFilas.getText());
@@ -143,20 +173,40 @@ public class LaberintoVista extends JFrame {
             }
         });
 
-        panelConfiguracion.add(botonActualizar);
-        JPanel panelTiempo = new JPanel();
-        panelTiempo.add(new JLabel("Tiempo:"));
-        campoTiempo = new JTextField();
-        campoTiempo.setEditable(false); // Campo no editable
-        campoTiempo.setPreferredSize(new Dimension(150, 30));
-        panelTiempo.add(campoTiempo);
+        gbcConfig.gridx = 0;
+        gbcConfig.gridy = 6;
+        gbcConfig.gridwidth = 2;
+        panelConfiguracion.add(botonActualizar, gbcConfig);
 
-        panelBotones.add(panelResolucion);
-        panelBotones.add(panelConfiguracion);
-        panelBotones.add(panelTiempo);
+        gbc.gridx = 0;
+        gbc.gridy = 1;
+        gbc.gridwidth = 2;
+        panelBotones.add(panelConfiguracion, gbc);
+
+        // Panel de tiempo de ejecución
+        JPanel panelTiempo = new JPanel(new GridBagLayout());
+        GridBagConstraints gbcTiempo = new GridBagConstraints();
+        gbcTiempo.insets = new Insets(5, 5, 5, 5);
+        gbcTiempo.fill = GridBagConstraints.HORIZONTAL;
+
+        JLabel lblTiempo = new JLabel("Tiempo:");
+        campoTiempo = new JTextField(15);
+        campoTiempo.setEditable(false);
+
+        gbcTiempo.gridx = 0;
+        gbcTiempo.gridy = 0;
+        panelTiempo.add(lblTiempo, gbcTiempo);
+        gbcTiempo.gridx = 1;
+        panelTiempo.add(campoTiempo, gbcTiempo);
+
+        gbc.gridx = 0;
+        gbc.gridy = 2;
+        gbc.gridwidth = 2;
+        panelBotones.add(panelTiempo, gbc);
 
         add(panelBotones, BorderLayout.SOUTH);
     }
+
 
     private void resolverLaberinto(String metodo) {
         long startTime = System.nanoTime(); // Inicia la medición del tiempo
