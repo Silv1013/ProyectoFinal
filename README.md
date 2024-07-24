@@ -1,4 +1,4 @@
-#Proyecto Final
+# Proyecto Final
 ![image](https://github.com/user-attachments/assets/b7911555-df7e-446c-a1e1-fa5542b0ca58)
 
 **Descripcion del Problema**
@@ -31,7 +31,7 @@ En el proyecto podemos ver que esta implementado el modelo MVC el cual cada paqu
 <br>
 **Vista** -> Contiene la clase LaberintoVista, esta clase hace un extends al Jframe, quiere decir que toda esta clase es una ventana, se añaden todos los botones, campos de textos, generador de laberinto, colores y se les asigna los actionListener, tambien se implemento metodos para que se resuelva con delay, limpiar el laberinto, asignar celdas de bloqueo.
 <br>
-#Marco Teorico
+# Marco Teorico
 <br>
 **Programacion dinamica**
 <br>
@@ -59,21 +59,37 @@ Se uso java con el IDE de Visual Studio Code
 <br>
 **Emily Espinoza**
 <br>
+Se propuso en un inicio hacer que cada metodo tenga su color diferente y que se peuda visualizar cada ruta, tambien poner un robot que recorra el camino resuelto, se propuso tambien la visualizacion de videos para comprender mejor el tema y usar de guia.
 
 <br>
 **Silvio Pinos**
 <br>
 Se propuso primero hacer el controlador y el modelo y probar sin GUI el funcionamiento de estos, luego investigar en videos y con ayudas externas la resolucion del problema y poco a poco se llego al proyecto final.
 <br>
-#Capturas de la GUI
+# Capturas de la GUI
 <br>
 ![image](https://github.com/user-attachments/assets/c05854e4-cf57-4511-9e2e-af490e12d18d)
 
 <br>
+![image](https://github.com/user-attachments/assets/5c5462e0-968c-40ff-879d-ec37c3b6c2b5)
+<br>
+![image](https://github.com/user-attachments/assets/2b571e48-cd2f-4996-bc9c-7874e9620c11)
 
 <br>
 
+## Conclusiones
 <br>
-
-
+El algoritmo que se hizo mas rapido para nuestra GUI fue el de Recursividad, teniendo una diferencia con los otros de 0.0004 segundos y es porque en la recursividad almacena los resultado que ya subdividio y evita calculos redundantes, haciendo mas eficiente al algoritmo.
+<br>
+Por otra parte el mas lento para nosotros fue el de cache, demorando 0.0005 segundos mas que los demas, usa una estructura muy similar a la recursiva y asi mismo tambien almacena resultados.
+<br>
+## Consideraciones
+<br>
+**Emily Espinoza**
+<br>
+Podriamos poner todos los métodos con diferentes colores y todos en un mismo laberinto para ver cuál es más corto o más rápido también podría algo para que el usuario pueda cambiar las formas y no solo sea rectángulos o que pueda poner como si fuera un juego, considero que en algunas partes se puede mejorar y se puede hacer algo mejor
+<br>
+**Silvio Pinos**
+<br>
+Se podria mejorar para que sea de alguna manera mas interactivo con el ususario, ya sea alguna figura recorriendo el tramo o haciendo que el usuario elija el color a usar en su interaccion, considero que se puede mejorar mucho en la parte visual, para que sea mas atractivo y eficiente.
 
