@@ -67,11 +67,12 @@ Se propuso primero hacer el controlador y el modelo y probar sin GUI el funciona
 <br>
 #Capturas de la GUI
 <br>
-![image](https://github.com/user-attachments/assets/ff62bc42-44bf-4c17-ae12-66373764b4ca)
+![image](https://github.com/user-attachments/assets/c05854e4-cf57-4511-9e2e-af490e12d18d)
+
 <br>
-![image](https://github.com/user-attachments/assets/c27ff8ae-6034-4f42-a14b-8a85844785e2)
+
 <br>
-![image](https://github.com/user-attachments/assets/b71bef1d-edfc-4f3d-8a43-1ca7a302a2ff)
+
 <br>
 
 
