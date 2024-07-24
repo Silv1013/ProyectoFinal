@@ -12,9 +12,9 @@ Como revision extra se pide que el laberinto pueda ser modificado en la interfaz
 **Introduccion**
 <br>
 En este codigo podemos ver como un laberinto designado por el usuario es resulto por varios algoritmos, proporcionando al usuario informacion relevante como: <br>
-- Tiempo en realizar el proceso
-- Caminos transitados por el algoritmo
-- Mejor camino obtenido
+- Tiempo en realizar el proceso <br>
+- Caminos transitados por el algoritmo <br>
+- Mejor camino obtenido <br>
   <br>
 El laberinto se resuelve paso a paso y se visualiza en la GUI.
 <br>
@@ -22,10 +22,10 @@ En el proyecto podemos ver que esta implementado el modelo MVC el cual cada paqu
 <br>
 **Controlador** -> Contiene la clase LaberintoControlador donde se inicializa un constructor con parametros de la Vista y tambien contiene los metodos de resolucion empleados para el laberinto:
   <br>
-  - BFS
-  - DFS
-  - Recursivo
-  - Cache
+  - BFS <br>
+  - DFS <br>
+  - Recursivo <br>
+  - Cache <br>
 <br>
 **Modelo** -> Contiene la clase LaberintoModelo, se inicializa las variables empleadas en todo el codigo y asi mismo los getter and setters
 <br>
