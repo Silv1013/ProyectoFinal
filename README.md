@@ -35,7 +35,7 @@ En el proyecto podemos ver que esta implementado el modelo MVC el cual cada paqu
 <br>
 **Programacion dinamica**
 <br>
-Es una técnica de optimización utilizada en algoritmos para resolver problemas complejos dividiéndolos en subproblemas más simples. La clave de la PD es almacenar los resultados de los subproblemas ya resueltos para evitar cálculos redundantes y mejorar la eficiencia. Es particularmente útil en problemas de optimización donde las soluciones de subproblemas pueden ser reutilizadas. La **Programacion Dinamica** suele aplicarse a problemas que pueden ser descompuestos en subproblemas solapados.
+Es una técnica de optimización utilizada en algoritmos para resolver problemas complejos dividiéndolos en subproblemas más simples. La clave de la Programacion Dinamica es almacenar los resultados de los subproblemas ya resueltos para evitar cálculos redundantes y mejorar la eficiencia. Es particularmente útil en problemas de optimización donde las soluciones de subproblemas pueden ser reutilizadas. La **Programacion Dinamica** suele aplicarse a problemas que pueden ser descompuestos en subproblemas solapados.
 <br>
 **BFS**
 <br>
@@ -55,5 +55,22 @@ Se llego a la solucion del problema aplicando lo aprendido y anotado en clase ll
 <br>
 Se uso java con el IDE de Visual Studio Code
 <br>
+**Criterio por Estudiante**
+<br>
+**Emily Espinoza**
+<br>
+
+<br>
+**Silvio Pinos**
+<br>
+Se propuso primero hacer el controlador y el modelo y probar sin GUI el funcionamiento de estos, luego investigar en videos y con ayudas externas la resolucion del problema y poco a poco se llego al proyecto final.
+<br>
+#Capturas de la GUI
+<br>
+![image](https://github.com/user-attachments/assets/ff62bc42-44bf-4c17-ae12-66373764b4ca)
+![image](https://github.com/user-attachments/assets/c27ff8ae-6034-4f42-a14b-8a85844785e2)
+![image](https://github.com/user-attachments/assets/b71bef1d-edfc-4f3d-8a43-1ca7a302a2ff)
+<br>
+
 
 
